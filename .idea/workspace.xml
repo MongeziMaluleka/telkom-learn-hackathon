@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="55373ff2-4970-4439-a618-4a95da963be2" name="Changes" comment="file structure">
       <change beforePath="$PROJECT_DIR$/html/home_page/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home_page/home.html" afterDir="false" />
