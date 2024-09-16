@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KiddiesLearn - HTML Headings</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+        .progress-bar {
+            height: 25px;
+            background-color: #4caf50;
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+        }
+        .progress-container {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            height: 25px;
+        }
+        .lesson-container {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .lesson-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .lesson-content {
+            font-size: 1.2rem;
+        }
+        .quiz-header {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        .quiz-question {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .quiz-options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .quiz-options li {
+            margin-bottom: 10px;
+        }
+        .quiz-options button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            border: none;
+            background-color: #00bcd4;
+            color: white;
+        }
+        .quiz-options button:hover {
+            background-color: #0097a7;
+        }
+        .result {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        .badge-container {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .badge {
+            background-color: #FFD700;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar" style="width: 0%;">0% Complete</div>
+        </div>
+
+        <!-- Lesson Content -->
+        <div class="lesson-container">
+            <div class="lesson-header">
+                <h2>Lesson: HTML Headings</h2>
+            </div>
+            <div class="lesson-content">
+                <p>In HTML, headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.</p>
+                <p>The <code>&lt;h1&gt;</code> tag defines the most important heading, and <code>&lt;h6&gt;</code> defines the least important heading.</p>
+                <p>Example:</p>
+                <pre><code>
+&lt;h1&gt;This is an H1 Heading&lt;/h1&gt;
+&lt;h2&gt;This is an H2 Heading&lt;/h2&gt;
+&lt;h3&gt;This is an H3 Heading&lt;/h3&gt;
+                </code></pre>
+                <p>Try using different heading levels to structure your web page content. Headings help users and search engines understand the importance of each section on your page.</p>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="lesson-container">
+            <div class="quiz-header">
+                <h2>Quiz: HTML Headings</h2>
+            </div>
+            <div id="quiz-content">
+                <!-- Question 1 -->
+                <p class="quiz-question">1. Which HTML tag is used to define the most important heading?</p>
+                <ul class="quiz-options">
+                    <li><button onclick="checkAnswer(1, 'correct')">&lt;h1&gt;</button></li>
+                    <li><button onclick="checkAnswer(1, 'wrong')">&lt;h6&gt;</button></li>
+                    <li><button onclick="checkAnswer(1, 'wrong')">&lt;h3&gt;</button></li>
+                    <li><button onclick="checkAnswer(1, 'wrong')">&lt;h5&gt;</button></li>
+                </ul>
+                <!-- Question 2 -->
+                <p class="quiz-question">2. Which heading tag is used for the least important heading?</p>
+                <ul class="quiz-options">
+                    <li><button onclick="checkAnswer(2, 'wrong')">&lt;h1&gt;</button></li>
+                    <li><button onclick="checkAnswer(2, 'correct')">&lt;h6&gt;</button></li>
+                    <li><button onclick="checkAnswer(2, 'wrong')">&lt;h3&gt;</button></li>
+                    <li><button onclick="checkAnswer(2, 'wrong')">&lt;h5&gt;</button></li>
+                </ul>
+                <!-- Question 3 -->
+                <p class="quiz-question">3. How many heading levels are available in HTML?</p>
+                <ul class="quiz-options">
+                    <li><button onclick="checkAnswer(3, 'wrong')">3</button></li>
+                    <li><button onclick="checkAnswer(3, 'wrong')">4</button></li>
+                    <li><button onclick="checkAnswer(3, 'correct')">6</button></li>
+                    <li><button onclick="checkAnswer(3, 'wrong')">5</button></li>
+                </ul>
+                <div class="result" id="result"></div>
+            </div>
+        </div>
+        
+
+        <!-- Badge Section -->
+        <div class="badge-container" id="badgeContainer">
+            <p>Congratulations! You've earned the <span class="badge">HTML Headings Badge</span>!</p>
+        </div>
+    </div>
+
+        <!-- Download Link for PDF -->
+        <div class="download-link">
+            <p>Download the <a href="https://www.tutorialspoint.com/html/html_tutorial.pdf" download>HTML Headings Notes PDF</a></p>
+        </div>
+    </div>
+
+
+    <!-- JavaScript to handle quiz logic and progress bar -->
+    <script>
+        let progress = 0;
+        let questionsAnswered = 0;
+
+        function checkAnswer(questionNumber, answer) {
+            let resultDiv = document.getElementById('result');
+            let progressBar = document.getElementById('progressBar');
+            let badgeContainer = document.getElementById('badgeContainer');
+
+            if (answer === 'correct') {
+                resultDiv.innerHTML = "Correct! Well done!";
+                resultDiv.style.color = 'green';
+                progress += 33;  // 33% per correct answer
+                progressBar.style.width = progress + '%';
+                progressBar.innerHTML = progress + '% Complete';
+            } else {
+                resultDiv.innerHTML = "Oops! That's not correct. Try again!";
+                resultDiv.style.color = 'red';
+            }
+
+            resultDiv.style.display = 'block';
+
+            // Track questions answered correctly
+            questionsAnswered++;
+            if (questionsAnswered === 3 && progress === 99) {
+                progressBar.style.width = '100%';
+                progressBar.innerHTML = '100% Complete';
+                badgeContainer.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>

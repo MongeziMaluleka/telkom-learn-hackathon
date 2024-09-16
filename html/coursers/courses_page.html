@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile - KiddiesLearn</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .profile-box {
+            background-color: #00bcd4;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .profile-box h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .profile-box .profile-edit-btn {
+            float: right;
+        }
+        .course-card {
+            margin-bottom: 20px;
+        }
+        .course-card img {
+            border-radius: 5px;
+        }
+        .footer {
+            padding: 20px;
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">KiddiesLearn</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Box -->
+    <section class="container mt-5">
+        <div class="profile-box">
+            <button class="btn btn-light profile-edit-btn" data-toggle="modal" data-target="#editProfileModal">Edit Profile</button>
+            <h2>Avela Manqele</h2>
+            <p>Age: 8 | Current Level: Beginner</p>
+            <p>Progress: 5% of HTML Course completed</p>
+        </div>
+    </section>
+
+    <!-- Courses Available -->
+    <section class="container">
+        <h3>Available Courses</h3>
+        <div class="row">
+            <!-- HTML Course -->
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="images/html-course.jpg" class="card-img-top" alt="HTML Course">
+                    <div class="card-body">
+                        <h5 class="card-title">HTML for Beginners</h5>
+                        <p class="card-text">Learn the basics of HTML and start building your own web pages!</p>
+                        <a href="/html/coursers/html_course.html" class="btn btn-primary">Continue Course</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CSS Course -->
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="images/css-course.jpg" class="card-img-top" alt="CSS Course">
+                    <div class="card-body">
+                        <h5 class="card-title">CSS for Beginners</h5>
+                        <p class="card-text">Style your web pages with CSS and make them look amazing!</p>
+                        <a href="/html/coursers/css_course.html" class="btn btn-primary">Start Course</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JavaScript Course -->
+            <div class="col-md-4">
+                <div class="card course-card">
+                    <img src="images/javascript-course.jpg" class="card-img-top" alt="JavaScript Course">
+                    <div class="card-body">
+                        <h5 class="card-title">JavaScript for Beginners</h5>
+                        <p class="card-text">Learn how to add interactivity to your web pages with JavaScript!</p>
+                        <a href="/html/coursers/javascript_course.html" class="btn btn-primary">Start Course</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="editProfileLabel">Edit Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="studentName">Name</label>
+                            <input type="text" class="form-control" id="studentName" value="Avela Manqele">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentAge">Age</label>
+                            <input type="number" class="form-control" id="studentAge" value="8">
+                        </div>
+                        <div class="form-group">
+                            <label for="studentLevel">Level</label>
+                            <select class="form-control" id="studentLevel">
+                                <option selected>Beginner</option>
+                                <option>Intermediate</option>
+                                <option>Advanced</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 KiddiesLearn. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

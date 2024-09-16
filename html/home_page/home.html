@@ -1,1 +1,190 @@
-<p>a</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KiddiesLearn - Coding for Underprivileged Kids</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<!-- Custom CSS -->
+	<style>
+		body {
+			font-family: 'Arial', sans-serif;
+		}
+		.hero {
+			background: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.geeksforgeeks.org%2Fcoding-for-kids%2F&psig=AOvVaw3eJ8vvR_Wc7STTFNc13Cz7&ust=1726492970532000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOjSvNWFxYgDFQAAAAAdAAAAABAE') no-repeat center center;
+			background-size: cover;
+			height: 100vh;
+			color: #FFFAF0;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+		.hero-overlay {
+			background-color: rgba(0, 123, 255, 0.7);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		.hero-content {
+			position: relative;
+			z-index: 2;
+		}
+		.hero h1 {
+			font-size: 3.5rem;
+			font-weight: bold;
+			color: #FFD700;
+			margin-bottom: 20px;
+		}
+		.hero p {
+			font-size: 1.5rem;
+			color: #FFFAF0;
+			margin-bottom: 30px;
+		}
+		.btn-learn {
+			background-color: #FFD700;
+			color: #007BFF;
+			font-size: 1.2rem;
+			padding: 15px 40px;
+			border: none;
+			border-radius: 50px;
+		}
+		.btn-learn:hover {
+			background-color: #FFC107;
+		}
+		.section-title {
+			font-size: 2rem;
+			color: #007BFF;
+			margin-bottom: 20px;
+		}
+		.key-features {
+			color: #343a40;
+			font-size: 1.2rem;
+			line-height: 1.6;
+		}
+		.footer {
+			padding: 20px;
+			background-color: #343a40;
+			color: #FFD700;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">KiddiesLearn</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About</a>
+				</li>
+				<li class="nav-item">
+					<button class="btn btn-light btn-login" data-toggle="modal" data-target="#studentLoginModal">Student Login</button>
+				</li>
+				<li class="nav-item">
+					<button class="btn btn-light btn-login" data-toggle="modal" data-target="#sponsorLoginModal">Sponsor Login</button>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="hero-overlay"></div>
+		<div class="hero-content">
+			<h1>Empowering Kids to Code</h1>
+			<p>Interactive, gamified coding lessons for underprivileged kids.</p>
+			<a href="/html/coursers/courses_page.html" class="btn btn-warning cc-btns-light cc-links" target="_blank">Go to profile </a>
+			  <img src="https://stock.adobe.com/search?k=kid+dance+logo" alt=""/>
+			</div>	
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section id="about" class="container text-center my-5">
+		<h2 class="section-title">Why Kiddies Learn?</h2>
+		<p class="key-features">KiddiesLearn provides coding lessons to kids from underprivileged homes, offering both online and offline access. Our platform combines learning with fun, motivation, and real rewards to ensure that every child, no matter where they are, can learn essential tech skills. Here’s what sets us apart:</p>
+		<ul class="key-features">
+			<li><strong>Offline Access:</strong> Basic lessons and coding challenges are accessible even without internet connectivity.</li>
+			<li><strong>Premium Content:</strong> Advanced tutorials, project-based learning, and downloadable resources for online users.</li>
+			<li><strong>Rewards System:</strong> Earn points and certificates for completing lessons to keep learning fun.</li>
+			<li><strong>Sponsor Tracking:</strong> Sponsors can log in to track student progress and support their learning journey.</li>
+		</ul>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<p>© 2024 KiddiesLearn. All Rights Reserved.</p>
+	</footer>
+
+	<!-- Student Login Modal -->
+	<div class="modal fade" id="studentLoginModal" tabindex="-1" aria-labelledby="studentLoginLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="studentLoginLabel">Student Login</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="studentEmail">Email address</label>
+							<input type="email" class="form-control" id="studentEmail" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+							<label for="studentPassword">Password</label>
+							<input type="password" class="form-control" id="studentPassword" placeholder="Password">
+						</div>
+						<button type="submit" class="btn btn-primary">Login</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Sponsor Login Modal -->
+	<div class="modal fade" id="sponsorLoginModal" tabindex="-1" aria-labelledby="sponsorLoginLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="sponsorLoginLabel">Sponsor Login</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="sponsorEmail">Email address</label>
+							<input type="email" class="form-control" id="sponsorEmail" placeholder="Enter email">
+						</div>
+						<div class="form-group">
+							<label for="sponsorPassword">Password</label>
+							<input type="password" class="form-control" id="sponsorPassword" placeholder="Password">
+						</div>
+						<button type="submit" class="btn btn-primary">Login</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+09:46
+
+
